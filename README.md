@@ -9,11 +9,11 @@ Command: docker run --name $postgrescontainer -e POSTGRES_USER=$myusername -e PO
 Example: docker run --name postgrescontainer -e POSTGRES_USER=myusername -e POSTGRES_PASSWORD=mypassword -p 5432:5432 -d postgres  
 Limitation: No persistent volume is used right now. To be used and updated shortly  
 
-3- Run the following command to get inside the PSQL container:
-Command: docker exec -it $postgrescontainer psql -U $myusername
-Example: docker exec -it postgrescontainer psql -U myusername
+3- Run the following command to get inside the PSQL container:  
+Command: docker exec -it $postgrescontainer psql -U $myusername  
+Example: docker exec -it postgrescontainer psql -U myusername  
 
-Note: all $vars shall be replaced with your preferred values.
+Note: all $vars shall be replaced with your preferred values.  
 
 
 
