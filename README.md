@@ -33,7 +33,7 @@ Also, creating DBs, tables, .. etc.
 docker ps
 
 
-5- Run PGAdmin container. this can be using the following command:
+5- Run PGAdmin container. this can be using the following command:  
 docker run --name pgadmincontainer -p 80:80 \
     -e 'PGADMIN_DEFAULT_EMAIL=user@domain.com' \
     -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' \
