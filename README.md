@@ -16,6 +16,7 @@ Example: docker exec -it postgrescontainer psql -U myusername
 Note: all $vars shall be replaced with your preferred values.
 
 
+
 After being inside the container, the following commands can be executed:
 \l : list all DBs. 
 \d : connect to DB.
@@ -26,3 +27,7 @@ After being inside the container, the following commands can be executed:
 \du : list all users.
 
 Also, creating DBs, tables, .. etc.
+
+
+4- to check the postgres container is running, run the following command:
+docker ps
