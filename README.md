@@ -48,6 +48,10 @@ Next is to add the ip of the postgresdb itself. to do that we need two steps:
 Based on that we can see the PGAdmin visualizing our DB tables normally.
 
 ----
+
+Another enhancement is to use docker compose and utilize using it. 
+
+----
 ## Example
 
 Now let us create a very minimal simple use case for a small company. It has the following key tables:
