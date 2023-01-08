@@ -35,7 +35,7 @@ docker ps
 
 
 ----
-##Example
+## Example
 
 Now let us create a very minimal simple use case for a small company. It has the following key tables:
 Departments (id, name).
