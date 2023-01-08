@@ -41,6 +41,12 @@ docker run --name pgadmincontainer -p 80:80 \
     
 Then we can use the ip of it shown in the docker ps to open the PGAdmin portal using the above email and password. Example: http://localhost:80/
 
+Next is to add the ip of the postgresdb itself. to do that we need two steps:
+1. Get the docker container id of the postgrescontainer via the following command:  docker ps | awk '/postgrescontainer/ {print $1}'   
+2. Run the following command and find the IPAddress from the output: docker inspect 12a9dd9d42bb.  
+
+Based on that we can see the PGAdmin visualizing our DB tables normally.
+
 ----
 ## Example
 
