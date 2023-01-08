@@ -38,7 +38,9 @@ docker ps
 ## Example
 
 Now let us create a very minimal simple use case for a small company. It has the following key tables:
-Departments (id, name).
-Employees (id, firstname, lastname, birthdate, mobile, email, salary, departmentid).
-Skills (id, name) // lookup table for list of predefined skills.
-EmployeeSkills (employeeid, skillid) // many to many relation between employee and skills.
+Departments (id, name).  
+Employees (id, firstname, lastname, birthdate, mobile, email, salary, departmentid). // one to many relation between employee and department.  
+Skills (id, name) // lookup table for list of predefined skills.  
+EmployeeSkills (employeeid, skillid) // many to many relation between employee and skills.  
+
+The goal here is to try different type of DB relations when trying the java springboot application & JPA.
