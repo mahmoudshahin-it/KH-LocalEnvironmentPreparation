@@ -39,7 +39,7 @@ docker run --name pgadmincontainer -p 80:80 \
     -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' \
     -d dpage/pgadmin4
     
-Then we can use the ip of it shown in the docker ps to open the PGAdmin portal using the above email and password.
+Then we can use the ip of it shown in the docker ps to open the PGAdmin portal using the above email and password. Example: http://localhost/80/
 
 ----
 ## Example
