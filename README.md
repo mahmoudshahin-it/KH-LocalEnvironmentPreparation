@@ -1,7 +1,7 @@
 # PostgresPreparation - Running locally
 
 
-Assumptions 
+## Assumptions 
 1- Docker desktop is installed // you have docker in your local machine.
 
 2- Run docker image to have the postgres container up and running using the below command:
@@ -35,7 +35,7 @@ docker ps
 
 
 ----
-
+##Example
 
 Now let us create a very minimal simple use case for a small company. It has the following key tables:
 Departments (id, name).
