@@ -31,3 +31,14 @@ Also, creating DBs, tables, .. etc.
 
 4- to check the postgres container is running, run the following command:
 docker ps
+
+
+
+----
+
+
+Now let us create a very minimal simple use case for a small company. It has the following key tables:
+Departments (id, name).
+Employees (id, firstname, lastname, birthdate, mobile, email, salary, departmentid).
+Skills (id, name) // lookup table for list of predefined skills.
+EmployeeSkills (employeeid, skillid) // many to many relation between employee and skills.
