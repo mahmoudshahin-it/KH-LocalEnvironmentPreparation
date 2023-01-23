@@ -1,4 +1,4 @@
-# PostgresPreparation - Running locally
+# Postgres Preparation - Running locally
 
 
 ## Assumptions 
