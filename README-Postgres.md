@@ -3,7 +3,9 @@
 
 ## Assumptions 
 1- Docker desktop is installed // you have docker in your local machine.
-
+To verify, run the following:
+docker version
+docker-compose version
 
 ## Steps  
 1- Run docker image to have the postgres container up and running using the below command:  
