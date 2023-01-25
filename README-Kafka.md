@@ -30,6 +30,8 @@ Note: All kafka sh files reside inside the container file system where you can c
 
 ``` kafka-console-producer --bootstrap-server localhost:9092 --topic first_topic ```
 
+``` kafka-console-consumer --bootstrap-server localhost:9092 --topic first_topic --from-beginning ```
+
 Since I am using Confluent Kafka docker image, the above commands can be found under: /bin  
 In case you use Kafka from different vendor, you will need to adjust a little bit and adapt accordingly.
 
