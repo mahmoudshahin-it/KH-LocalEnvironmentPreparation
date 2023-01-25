@@ -61,4 +61,9 @@ kafka-topics --bootstrap-server mhshahin-kafka-1:9092 \
  
  ```
 
+  
+  Note: In this demo, we use 
+  https://hub.docker.com/r/confluentinc/cp-zookeeper  
+  https://hub.docker.com/r/confluentinc/cp-kafka  
+  
 ## Examples 
