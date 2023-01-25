@@ -24,7 +24,8 @@ docker-compose -f /Users/mhshahin/docker-compose.yml up -d
 Note: Please change the directory to where the file resides.  
 After running it, you can verify by executing docker ps.  
 
-3- Get inside the running container by executing ```docker exec -it $kafka /bin/sh  ```  
+3- From inside the docker  
+Get inside the running container by executing ```docker exec -it $kafka /bin/sh  ```  
 put the right value for $kafka (to have the container name)  
 Note: All kafka sh files reside inside the container file system where you can create topics normally.  
 
@@ -38,7 +39,8 @@ Note: All kafka sh files reside inside the container file system where you can c
 Since I am using Confluent Kafka docker image, the above commands can be found under: /bin  
 In case you use Kafka from different vendor, you will need to adjust a little bit and adapt accordingly.
 
-4- Also, from outside, we can run commands to interact with kafka:  
+4- From outside the docker  
+Also, from outside, we can run commands to interact with kafka:  
 
 ```
 docker exec mhshahin-kafka-1 \
