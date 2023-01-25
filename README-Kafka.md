@@ -22,7 +22,7 @@ Note: Please change the directory to where the file resides.
 After running it, you can verify by executing docker ps.  
 
 3- Get inside the running container by executing docker exec -it kafka /bin/sh  
-Note: All kafka sh files reside inside the container file system under /opt/kafka/../bin/  
+Note: All kafka sh files reside inside the container file system where you can create topics normally.
 
 
 ## Examples 
