@@ -31,14 +31,17 @@ Since I am using Confluent Kafka docker image, the above commands can be found u
 In case you use Kafka from different vendor, you will need to adjust a little bit and adapt accordingly.
 
 4- Also, from outside, we can run commands to interact with kafka:  
-docker exec mhshahin-kafka-1 \
+
+```docker exec mhshahin-kafka-1 \
 kafka-topics --bootstrap-server mhshahin-kafka-1:9092 \
              --create \
              --topic quickstart  
+```             
              
-             
-docker exec mhshahin-kafka-1 \
+```docker exec mhshahin-kafka-1 \
 kafka-topics --bootstrap-server mhshahin-kafka-1:9092 \
              --list  
+             
+ ```
 
 ## Examples 
