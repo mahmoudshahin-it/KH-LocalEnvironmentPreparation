@@ -27,6 +27,8 @@ Note: All kafka sh files reside inside the container file system where you can c
 ```kafka-topics --create --replication-factor 1 --partitions 1 --topic first_topic --bootstrap-server localhost:9092  ```  
 ```kafka-topics --list --bootstrap-server localhost:9092  ```  
 
+``` kafka-console-producer --bootstrap-server localhost:9092 --topic first_topic ```
+
 Since I am using Confluent Kafka docker image, the above commands can be found under: /bin  
 In case you use Kafka from different vendor, you will need to adjust a little bit and adapt accordingly.
 
