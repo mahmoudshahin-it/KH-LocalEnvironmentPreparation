@@ -24,8 +24,8 @@ After running it, you can verify by executing docker ps.
 3- Get inside the running container by executing docker exec -it kafka /bin/sh  
 Note: All kafka sh files reside inside the container file system where you can create topics normally.  
 
-kafka-topics --create --replication-factor 1 --partitions 1 --topic first_topic --bootstrap-server localhost:9092  
-kafka-topics --list --bootstrap-server localhost:9092  
+```kafka-topics --create --replication-factor 1 --partitions 1 --topic first_topic --bootstrap-server localhost:9092  ```  
+```kafka-topics --list --bootstrap-server localhost:9092  ```  
 
 Since I am using Confluent Kafka docker image, the above commands can be found under: /bin  
 In case you use Kafka from different vendor, you will need to adjust a little bit and adapt accordingly.
