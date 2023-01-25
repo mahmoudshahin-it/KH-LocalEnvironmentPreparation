@@ -21,7 +21,8 @@ docker-compose -f /Users/mhshahin/docker-compose.yml up -d
 Note: Please change the directory to where the file resides.  
 After running it, you can verify by executing docker ps.  
 
-3- Get inside the running container by executing docker exec -it kafka /bin/sh  
+3- Get inside the running container by executing ```docker exec -it $kafka /bin/sh  ```  
+put the right value for $kafka (to have the container name)  
 Note: All kafka sh files reside inside the container file system where you can create topics normally.  
 
 ```kafka-topics --create --replication-factor 1 --partitions 1 --topic first_topic --bootstrap-server localhost:9092  ```  
