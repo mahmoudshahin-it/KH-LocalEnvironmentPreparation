@@ -40,16 +40,23 @@ In case you use Kafka from different vendor, you will need to adjust a little bi
 
 4- Also, from outside, we can run commands to interact with kafka:  
 
-```docker exec mhshahin-kafka-1 \
+```
+docker exec mhshahin-kafka-1 \
 kafka-topics --bootstrap-server mhshahin-kafka-1:9092 \
              --create \
              --topic quickstart  
 ```             
              
-```docker exec mhshahin-kafka-1 \
+```
+docker exec mhshahin-kafka-1 \
 kafka-topics --bootstrap-server mhshahin-kafka-1:9092 \
              --list  
              
+ ```
+ 
+ ```
+ docker exec mhshahin-kafka-1 kafka-console-consumer --bootstrap-server localhost:9092 --topic first_topic --from-beginning
+ 
  ```
 
 ## Examples 
