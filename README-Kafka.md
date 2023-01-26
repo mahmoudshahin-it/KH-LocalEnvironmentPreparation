@@ -61,6 +61,11 @@ kafka-topics --bootstrap-server mhshahin-kafka-1:9092 \
  
  ```
  
+ ```
+ docker exec -it mhshahin-kafka-1 kafka-console-producer --bootstrap-server localhost:9092 --topic first_topic
+
+ ```
+ 
 ```
 docker exec mhshahin-kafka-1 \
 kafka-topics --bootstrap-server mhshahin-kafka-1:9092 \
