@@ -60,7 +60,14 @@ kafka-topics --bootstrap-server mhshahin-kafka-1:9092 \
  docker exec mhshahin-kafka-1 kafka-console-consumer --bootstrap-server localhost:9092 --topic first_topic --from-beginning
  
  ```
+ 
+```
+docker exec mhshahin-kafka-1 \
+kafka-topics --bootstrap-server mhshahin-kafka-1:9092 \
+             --describe \
+             --topic quickstart
 
+```
   
   Note: In this demo, we use   
   https://hub.docker.com/r/confluentinc/cp-zookeeper  
