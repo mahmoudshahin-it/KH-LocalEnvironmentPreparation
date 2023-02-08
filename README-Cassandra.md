@@ -1,57 +1,77 @@
-Kafka Preparation - Running locally
-Assumptions
-1- Docker desktop is installed // you have docker in your local machine.
-To verify, run the following:
+# Cassandra Preparation - Running locally
 
+
+## Assumptions  
+1- Docker desktop is installed // you have docker in your local machine.  
+To verify, run the following:  
 docker version  
+docker-compose version  
 
-docker-compose version   
-Steps
-1- donwload related docker compose file and go to its local directory:
-https://github.com/mahmoudshahin-it/KH-LocalEnvironmentPreparation/blob/master/docker-compose-kafka.yml
+## Steps  
 
-2- run the following command:
-docker-compose -f /Users/mhshahin/docker-compose.yml up -d
-Note: Please change the directory to where the file resides.
-After running it, you can verify by executing docker ps.
+1- Pull the latest version of Cassandra:  
 
-3- From inside the docker
-Get inside the running container by executing docker exec -it $kafka /bin/sh  
-put the right value for $kafka (to have the container name)
-Note: All kafka sh files reside inside the container file system where you can create topics normally.
+`docker pull cassandra`
 
-kafka-topics --create --replication-factor 1 --partitions 1 --topic first_topic --bootstrap-server localhost:9092  
-kafka-topics --list --bootstrap-server localhost:9092  
+2- Verify that it is pulled successfully:  
 
-kafka-console-producer --bootstrap-server localhost:9092 --topic first_topic
+`docker images`
 
-kafka-console-consumer --bootstrap-server localhost:9092 --topic first_topic --from-beginning
 
-Since I am using Confluent Kafka docker image, the above commands can be found under: /bin
-In case you use Kafka from different vendor, you will need to adjust a little bit and adapt accordingly.
+3- Run docker image to have a  container that we can deal with:
 
-4- From outside the docker
-Also, from outside, we can run commands to interact with kafka:
+`docker run -d --name mycassandra -p 9042:9042 cassandra`
 
-docker exec mhshahin-kafka-1 \
-kafka-topics --bootstrap-server mhshahin-kafka-1:9092 \
-             --create \
-             --topic quickstart  
-docker exec mhshahin-kafka-1 \
-kafka-topics --bootstrap-server mhshahin-kafka-1:9092 \
-             --list  
-             
-docker exec mhshahin-kafka-1 kafka-console-consumer --bootstrap-server localhost:9092 --topic first_topic --from-beginning
+4- Check the running containers & verify that the new container is up & running:
+`docker ps`
 
-docker exec -it mhshahin-kafka-1 kafka-console-producer --bootstrap-server localhost:9092 --topic first_topic
 
-docker exec mhshahin-kafka-1 \
-kafka-topics --bootstrap-server mhshahin-kafka-1:9092 \
-             --describe \
-             --topic quickstart
+5- Get inside docker & do CQL queries:
+Either
 
-Note: In this demo, we use
-https://hub.docker.com/r/confluentinc/cp-zookeeper
-https://hub.docker.com/r/confluentinc/cp-kafka
+5.1
+`docker exec -it mycassandra cqlsh`
 
-Examples
+Or
+
+5.2
+`docker exec -it mycassandra bash`
+then inside the contsiner run: 
+`cqlsh`
+
+
+
+6- Since we are inside the CQL, we can run commands like:
+
+6.1 Create a key space:
+
+`create keyspace test_keyspace with replication = {'class': 'SimpleStrategy', 'replication_factor': 1};`
+
+6.2 Use the key space:
+`use test_keyspace ;`
+
+6.3
+`CREATE TABLE test_keyspace.test_table (id int primary key, name text, city text);`
+
+
+6.4
+Select from the table:
+`select * from test_keyspace.test_table;`
+
+
+6.5
+`insert into test_keyspace.test_table (id, name, city) values (1,'Ramzy', 'Singapore');  `
+
+`insert into test_keyspace.test_table (id, name, city) values (2,'Rania', 'Tokyo’);  `
+
+
+6.6 
+Check the records:  
+`select * from test_keyspace.test_table;  `
+----
+
+Another enhancement is to use docker compose and utilize using it.   
+
+----
+## Example
+
