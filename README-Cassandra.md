@@ -53,6 +53,8 @@ then inside the contsiner run:
 6.3
 `CREATE TABLE test_keyspace.test_table (id int primary key, name text, city text);`
 
+`describe keyspaces;`
+
 
 6.4
 Select from the table:
