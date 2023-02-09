@@ -55,6 +55,20 @@ Based on that we can see the PGAdmin visualizing our DB tables normally.
 
 Another enhancement is to use docker compose and utilize using it. 
 
+
+https://github.com/mahmoudshahin-it/KH-LocalEnvironmentPreparation/blob/master/docker-compose-postgres.yaml
+
+If used the above docker compose file, you can follow the below steps:
+* `docker compose up -d `
+* Open your browser and go to pgAdmin URL: http://localhost:5050/  
+* Login & add a new server
+
+Add a new server in pgAdmin. 
+<img width="406" alt="image" src="https://user-images.githubusercontent.com/112946481/217856052-4315a53d-d591-4656-9993-e13f32360230.png">
+
+Add postgres DB details with hostname = the $PostgresContainerName "postgres-container-demo" & the container port "5432".  
+<img width="402" alt="image" src="https://user-images.githubusercontent.com/112946481/217857731-6f8584a0-a623-4555-b572-7e75c6749650.png">
+
 ----
 ## Example
 
