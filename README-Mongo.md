@@ -145,14 +145,14 @@ Also, deleteMany can be used to do the same for many documents.
 To add more details later:  
 $and: [{}, {}]  
 $or: [{}, {}]  
-$not:
-$inc
-$rename
-updateMany
-ReplaceOne
-ReplaceMany
+$not:  
+$inc  
+$rename  
+updateMany  
+ReplaceOne  
+ReplaceMany  
 
 
-update VS. Replace?
+update VS. Replace?  
 
 
