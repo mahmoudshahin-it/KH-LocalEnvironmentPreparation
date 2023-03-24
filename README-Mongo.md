@@ -129,4 +129,7 @@ To add more details later:
 $and: [{}, {}]  
 $or: [{}, {}]  
 $not:
+$inc
+$rename
+
 
