@@ -91,7 +91,7 @@ mentorsobjects = [
 `db.mentors.insertMany(mentorsobjects)`
 
 
-6.5: find/ select from the collection:  
+4.5: find/ select from the collection:  
 `db.mentors.find()`  
 `db.mentors.find().sort({fname:-1})`  
 `db.mentors.find().sort({fname:1})`  
@@ -100,7 +100,5 @@ mentorsobjects = [
 
 
 
-Another enhancement is to use docker compose and utilize using it.   
-
 ----
-## Example
+To add more details later.
