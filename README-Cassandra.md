@@ -73,6 +73,7 @@ Check the records:
 ----
 
 Another enhancement is to use docker compose and utilize using it.   
+Also, try complex queries.  
 
 ----
 ## Example
