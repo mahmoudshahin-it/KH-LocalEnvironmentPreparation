@@ -115,6 +115,7 @@ then select from all documents mentors without BDate available:
 
 
 ----
-To add more details later.
-$and [{}, {}]  
-$or [{}, {}]  
+To add more details later:  
+$and: [{}, {}]  
+$or: [{}, {}]  
+$not:
