@@ -99,6 +99,19 @@ mentorsobjects = [
 `db.mentors.find({fname: { $ne: 'Katy'}}, {_id:0}).sort({fname:1})`  
 `db.mentors.find({fname: { $in: ['Katy', 'John']}}, {_id:0}).sort({fname:1})`  
 
+5.6 add a new mentor without bdate:
+```
+db.mentors.insertOne({
+    fname: 'Samy',
+    lname: 'Najm',
+    phone: '0100100200200',
+    email: 'snjm.1@gmail.com',
+    skills: ['RabbitMQ', 'CouchBase']
+   }
+ )
+```
+then select from all documents mentors without BDate available:  
+`db.mentors.find({bdate:{$exists: false}})`
 
 
 ----
