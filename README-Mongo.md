@@ -92,10 +92,10 @@ mentorsobjects = [
 
 
 6.5: find/ select from the collection:  
-`db.mentors.find()`
-`db.mentors.find().sort(fname:-1)`
-`db.mentors.find().sort(fname:1)`
-`db.mentors.find().sort(fname:-1).limit(2)`
+`db.mentors.find()`  
+`db.mentors.find().sort({fname:-1})`  
+`db.mentors.find().sort({fname:1})`  
+`db.mentors.find().sort({fname:11}).limit(2)`  
 
 
 
