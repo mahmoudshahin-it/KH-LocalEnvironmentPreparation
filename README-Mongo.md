@@ -113,9 +113,14 @@ db.mentors.insertOne({
 then select from all documents mentors without BDate available:  
 `db.mentors.find({bdate:{$exists: false}})`
 
+then select the total count:
+`db.mentors.countDocuments()`
+`db.mentors.countDocuments({bdate:{$exists : false}})`
+
 
 ----
 To add more details later:  
 $and: [{}, {}]  
 $or: [{}, {}]  
 $not:
+
