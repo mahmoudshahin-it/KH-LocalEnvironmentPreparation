@@ -133,7 +133,13 @@ Also, we can add/remove to/from an array more items (ie: Skills):
 
 <img width="937" alt="image" src="https://user-images.githubusercontent.com/112946481/227553374-61d0598d-bc01-4036-aef3-691ea374d59b.png">
 
+4.8 deleteOne  
+`db.mentors.deleteOne({fname: "Samy"})`
+Expected output is:  
+{ acknowledged: true, deletedCount: 1 } // if match condition is true  
+{ acknowledged: true, deletedCount: 0 } // if match condition is false  
 
+Also, deleteMany can be used to do the same for many documents.  
 
 ----
 To add more details later:  
