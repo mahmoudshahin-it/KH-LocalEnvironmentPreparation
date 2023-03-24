@@ -10,8 +10,8 @@ docker-compose version
 ## Steps  
 
 1. create docker-compose.yaml with the below content:  
-
-`version: '3.8'
+```
+version: '3.8'
 services:
   mongodb:
     image: mongo:latest # use the latest image.
@@ -22,7 +22,8 @@ services:
     ports:
       - 27017:27017
     volumes: # optional to preserve database after container is deleted.
-      - ./database-data:/data/db `
+      - ./database-data:/data/db 
+ ```
 
 2. Verify that the container of mongodb-horus is available by running the below command:  
 `docker ps`
@@ -57,7 +58,8 @@ To verify,
 4.4
 Insert multiple documents to the mentors collections:  
 4.4.1: Objects to be in a variable mentorsobjects:  
-`mentorsobjects = [
+``` 
+mentorsobjects = [
   {
   "fname": "Katy",
   "lname": "Pau",
@@ -82,12 +84,11 @@ Insert multiple documents to the mentors collections:
   "email": "j.samir@gmail.com",
   "skills": ["devops","cloud","infra"]
   }
-]`
+]
+```
 
 4.4.2: Insert many:  
-`
-db.mentors.insertMany(mentorsobjects)
-`
+`db.mentors.insertMany(mentorsobjects)`
 
 
 6.5
