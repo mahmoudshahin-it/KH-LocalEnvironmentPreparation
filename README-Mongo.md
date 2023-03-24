@@ -44,14 +44,14 @@ Note: username, password and container_name shall be matching with the docker co
 
 `use mentor-horus`
 
-4.2 Create DB table (Collection):
-`db.createCollection("mentors")`
+4.2 Create DB table (Collection):  
+`db.createCollection("mentors")`  
   Table name/ collection name in our case is mentors.
 
-4.3 Insert a record (Document) to the table (Collection)
+4.3 Insert a record (Document) to the table (Collection). 
 `db.mentors.insertOne({ "fname": "Mahmoud", "lname": "Shahin", "bdate": "19871126", "phone": "01007787781", "email": "mahmoudshahin.it@gmail.com", "skills": [ "java", "c#", "MongoDB", "Cassandra", "Angular"] })`
 
-To verify, 
+To verify,  
 `db.mentors.find()`
 
 
@@ -91,7 +91,7 @@ mentorsobjects = [
 `db.mentors.insertMany(mentorsobjects)`
 
 
-6.5
+6.5: find/ select from the collection:  
 `db.mentors.find()`
 `db.mentors.find().sort(fname:-1)`
 `db.mentors.find().sort(fname:1)`
