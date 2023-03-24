@@ -11,7 +11,7 @@ docker-compose version
 
 1. create docker-compose.yaml with the below content:  
 
-``` version: '3.8'
+`version: '3.8'
 services:
   mongodb:
     image: mongo:latest # use the latest image.
@@ -22,10 +22,10 @@ services:
     ports:
       - 27017:27017
     volumes: # optional to preserve database after container is deleted.
-      - ./database-data:/data/db ```
+      - ./database-data:/data/db `
 
 2. Verify that the container of mongodb-horus is available by running the below command:  
-```docker ps```
+`docker ps`
 
 
 
