@@ -97,6 +97,7 @@ mentorsobjects = [
 `db.mentors.find().sort({fname:1})`  
 `db.mentors.find().sort({fname:1}).limit(2)`  
 `db.mentors.find({fname: { $ne: 'Katy'}}, {_id:0}).sort({fname:1})`  
+`db.mentors.find({fname: { $in: ['Katy', 'John']}}, {_id:0}).sort({fname:1})`  
 
 
 
