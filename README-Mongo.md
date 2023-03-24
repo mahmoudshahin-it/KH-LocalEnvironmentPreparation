@@ -123,6 +123,17 @@ The below figure shows the impact of the above updateOne command:
 
 <img width="859" alt="image" src="https://user-images.githubusercontent.com/112946481/227550886-0425a404-f300-4a6f-8bce-5887caaa61db.png">
 
+  
+Also, we can add/remove to/from an array more items (ie: Skills):  
+
+`db.mentors.updateOne({fname: "Samy"}, {$push: {skills: "Redis"}})`  
+`db.mentors.updateOne({fname: "Samy"}, {$pull: {skills: "CouchBase"}})`
+
+
+
+<img width="937" alt="image" src="https://user-images.githubusercontent.com/112946481/227553374-61d0598d-bc01-4036-aef3-691ea374d59b.png">
+
+
 
 ----
 To add more details later:  
