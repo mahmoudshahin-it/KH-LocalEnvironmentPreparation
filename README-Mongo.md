@@ -99,7 +99,7 @@ mentorsobjects = [
 `db.mentors.find({fname: { $ne: 'Katy'}}, {_id:0}).sort({fname:1})`  
 `db.mentors.find({fname: { $in: ['Katy', 'John']}}, {_id:0}).sort({fname:1})`  
 
-5.6 add a new mentor without bdate:
+4.6 add a new mentor without bdate:
 ```
 db.mentors.insertOne({
     fname: 'Samy',
@@ -117,6 +117,8 @@ then select the total count:
 `db.mentors.countDocuments()`
 `db.mentors.countDocuments({bdate:{$exists : false}})`
 
+4.7 updating document:
+`db.mentors.updateOne({fname:"samy"},{$set: {lname:"Gamal"}})`
 
 ----
 To add more details later:  
