@@ -142,5 +142,8 @@ $or: [{}, {}]
 $not:
 $inc
 $rename
+updateMany
+ReplaceOne
+ReplaceMany
 
 
