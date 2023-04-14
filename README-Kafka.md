@@ -44,7 +44,8 @@ One producer to a topic horus-payment-topic.
 Three consumers (three terminals)
 ```
 kafka-topics --create --replication-factor 1 --partitions 2 --topic horus-payment-topic --bootstrap-server localhost:9092   
-kafka-topics --list --bootstrap-server localhost:9092   
+kafka-topics --list --bootstrap-server localhost:9092  
+kafka-topics --bootstrap-server localhost:9092 --describe --topic horus-payment-topic   
 kafka-console-producer --bootstrap-server localhost:9092 --topic horus-payment-topic
 kafka-console-consumer --bootstrap-server localhost:9092 --topic horus-payment-topic
 kafka-console-consumer --bootstrap-server localhost:9092 --topic horus-payment-topic
