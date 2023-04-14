@@ -23,7 +23,7 @@ https://github.com/mahmoudshahin-it/KH-LocalEnvironmentPreparation/blob/master/d
 ```docker-compose -f /Users/mhshahin/docker-compose.yml up -d  ```   
 or if you are inside the directory itself ``` docker compose up -d ```   
 Note: Please change the directory to where the file resides.  
-After running it, you can verify by executing docker ps.  
+After running it, you can verify by executing docker ps. 
 
 3- From inside the docker  
 Get inside the running container by executing ```docker exec -it $kafka /bin/sh  ```  
