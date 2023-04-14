@@ -2,6 +2,7 @@ version: '2'
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
+    container_name: cp-zookeeper-container-demo
     ports:
       - 22181:2181
     environment:
@@ -10,7 +11,8 @@ services:
 
   kafka:
     image: confluentinc/cp-kafka:latest
-    depends_on: 
+    container_name: cp-kafka-container-demo
+    depends_on:
       - zookeeper
     ports:
       - 29092:29092
