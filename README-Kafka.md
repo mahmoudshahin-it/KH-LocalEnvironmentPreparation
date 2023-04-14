@@ -21,6 +21,7 @@ https://github.com/mahmoudshahin-it/KH-LocalEnvironmentPreparation/blob/master/d
 
 2- run the following command:  
 ```docker-compose -f /Users/mhshahin/docker-compose.yml up -d  ```   
+or if you are inside the directory itself ``` docker compose up -d ```   
 Note: Please change the directory to where the file resides.  
 After running it, you can verify by executing docker ps.  
 
