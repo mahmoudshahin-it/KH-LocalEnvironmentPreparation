@@ -62,7 +62,7 @@ Also, from outside, we can run commands to interact with kafka:
 docker exec cp-kafka-container-demo \
 kafka-topics --bootstrap-server localhost:9092 \
              --create \
-             --topic quickstart  
+             --topic horus-payment-topic  
 ```             
              
 ```
@@ -73,20 +73,20 @@ kafka-topics --bootstrap-server localhost:9092 \
  ```
  
  ```
- docker exec cp-kafka-container-demo kafka-console-consumer --bootstrap-server localhost:9092 --topic first_topic --from-beginning
+ docker exec cp-kafka-container-demo kafka-console-consumer --bootstrap-server localhost:9092 --topic horus-payment-topic --from-beginning
  
  ```
  
  ```
- docker exec -it cp-kafka-container-demo kafka-console-producer --bootstrap-server localhost:9092 --topic first_topic
+ docker exec -it cp-kafka-container-demo kafka-console-producer --bootstrap-server localhost:9092 --topic horus-payment-topic
 
  ```
  
 ```
 docker exec cp-kafka-container-demo \
-kafka-topics --bootstrap-server mhshahin-kafka-1:9092 \
+kafka-topics --bootstrap-server localhost-1:9092 \
              --describe \
-             --topic quickstart
+             --topic horus-payment-topic
 
 ```
   
