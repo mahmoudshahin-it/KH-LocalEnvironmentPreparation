@@ -25,7 +25,7 @@ or if you are inside the directory itself ``` docker compose up -d ```
 Note: Please change the directory to where the file resides.  
 After running it, you can verify by executing docker ps. 
 
-3- From inside the docker  
+3- From inside the container  
 Get inside the running container by executing ```docker exec -it $kafka /bin/sh  ```  
 put the right value for $kafka (to have the container name)  
 Note: All kafka sh files reside inside the container file system where you can create topics normally.  
